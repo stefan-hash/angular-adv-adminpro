@@ -1,15 +1,14 @@
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
-//Modulos
+// Modulos
 import { AppRoutingModule } from './app-routing.module';
 import { PagesModule } from './pages/pages.module';
 import { AuthModule } from './auth/auth.module';
 
 import { AppComponent } from './app.component';
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
-import { Error404Component } from './error404/error404.component';
 
 
 
@@ -17,7 +16,7 @@ import { Error404Component } from './error404/error404.component';
 @NgModule({
   declarations: [
     AppComponent,
-    Error404Component,
+    NopagefoundComponent,
   ],
   imports: [
     BrowserModule,
@@ -25,7 +24,6 @@ import { Error404Component } from './error404/error404.component';
     PagesModule,
     AuthModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

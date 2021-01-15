@@ -1,24 +1,28 @@
-import { AuthRoutingModule } from './auth/auth.routing';
-import { PagesRoutingModule } from './pages/pages.routing';
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from '@angular/router';
-import { Error404Component } from './error404/error404.component';
+import { RouterModule, Routes } from '@angular/router';
+
+// Modulos
+import { PagesRoutingModule } from './pages/pages.routing';
+import { AuthRoutingModule } from './auth/auth.routing';
+
+import { NopagefoundComponent } from './nopagefound/nopagefound.component';
 
 
 const routes: Routes = [
 
-  //path: '/dashboard' PagesRouting
-  //path: '/auth' AuthRouting
-  //path: '/electronica' ElectronicaRouting
-  //path: '/compras' ComprasRouting
-
-{path: '', redirectTo: '/dashboard', pathMatch: 'full'},
-{path: '**', component: Error404Component},
+  // path: '/dashboard' PagesRouting
+  // path: '/auth' AuthRouting
+  // path: '/medicos' MedicosRouting
+  // path: '/compras' ComprasRouting
+  { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
+  { path: '**', component: NopagefoundComponent },
 ];
+
+
 
 @NgModule({
   imports: [
-    RouterModule.forRoot(routes),
+    RouterModule.forRoot( routes ),
     PagesRoutingModule,
     AuthRoutingModule
   ],
